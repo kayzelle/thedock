@@ -1,2 +1,2 @@
-# thedock
+# the dock
 the dock
