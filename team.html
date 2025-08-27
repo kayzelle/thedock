@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The DOCK</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-title">THE DOCK</div>
+                <div>PRESENTED BY EED</div>
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="announcements.html">ANNOUNCEMENTS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li id="currentpage"><a href="team.html">TEAM</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1>Meet the Team!</h1>
+        <img id="thedock" src="assets/thedocklogo.webp" alt="The DOCK Logo" />
+        <p>
+        Meet the team behind The DOCK!
+        <br>
+        Below, you can find a list of each team member,
+        their contributions, and their contact information.
+        </p>
+        <br><br>
+        <!-- Contact Boxes -->
+        <div class="teamcontainer">
+            <!-- Kayzelle Dagum -->
+            <div class="team-member">
+                <h3>Kayzelle Dagum</h3>
+                <p>
+                    Developed the website for The DOCK and contributed to the graphic design team.
+                </p>
+                <p>
+                    <!-- Portfolio Link -->
+                    <svg class="contactsvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g transform="matrix(1 0 0 1 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4;" transform=" translate(-12, -11.5)" d="M 9 3 L 9 4 L 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.103 2.897 20 4 20 L 20 20 C 21.103 20 22 19.103 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 15 4 L 15 3 L 9 3 z M 12 7.5 C 13.105 7.5 14 8.395 14 9.5 C 14 10.605 13.105 11.5 12 11.5 C 10.895 11.5 10 10.605 10 9.5 C 10 8.395 10.895 7.5 12 7.5 z M 12 12.388672 C 13.669 12.388672 17 13.27425 17 15.03125 L 17 16.5 L 7 16.5 L 7 15.03125 C 7 13.27425 10.331 12.388672 12 12.388672 z" stroke-linecap="round" />
+                        </g>
+                    </svg>
+
+                    <a href="https://kayzelle.com" target="_blank">kayzelle.com</a>
+
+                    <br>
+                    <!-- Email Link -->
+                    <svg class="contactsvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 13.065L1.5 6.75v10.5c0 .966.784 1.75 1.75 1.75h17.5c.966 0 1.75-.784 1.75-1.75V6.75L12 13.065z"/>
+                        <path d="M12 11.135L2.75 5.5H21.25L12 11.135z"/>
+                    </svg>
+                    
+                    kayzelled@gmail.com
+
+                    <br>
+                    <!-- LinkedIn Link -->
+                    <svg class="contactsvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19 0H5C2.25 0 0 2.25 0 5v14c0 2.75 2.25 5 5 5h14c2.75 0 5-2.25 5-5V5c0-2.75-2.25-5-5-5zM8.625 19H5.75V9h2.875v10zm-1.438-11.25c-.92 0-1.688-.767-1.688-1.687 0-.92.767-1.688 1.688-1.688s1.688.767 1.688 1.688c0 .92-.767 1.688-1.688 1.688zM19 19h-2.875v-4.95c0-1.2-.025-2.75-1.688-2.75-1.688 0-1.938 1.312-1.938 2.662V19H9.625V9h2.75v1.375h.04c.38-.725 1.3-1.487 2.687-1.487 2.875 0 3.375 1.888 3.375 4.35V19z"/>
+                    </svg>
+                    
+                    <a href="https://www.linkedin.com/in/kayzelle" target="_blank">linkedin.com/in/kayzelle</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <main>
+        <footer>
+        <p id="credits">This website was developed by Kayzelle Dagum</p>
+        <p id="copyright">&copy; 2025 UNLV EED & ETD. All rights reserved.</p>
+        </footer>
+    </main>
+    <!-- hamburger menu for mobile -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

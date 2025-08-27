@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The DOCK</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-title">THE DOCK</div>
+                <div>PRESENTED BY EED</div>
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <ul class="nav-links" id="nav-links">
+                    <li id="currentpage"><a href="about.html">ABOUT</a></li>
+                    <li><a href="announcements.html">ANNOUNCEMENTS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="team.html">TEAM</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="info">
+        <h1>About</h1>
+        <!-- <img id="thedock" src="assets/thedocklogo.webp" alt="The DOCK Logo" /> -->
+        <section class="list">
+            <p>
+                The Entertainment Engineering Program at the University of Nevada, Las Vegas 
+                finds Artwalk to be a great showcase of our
+                interdisciplinary status between the college of engineering and college of fine arts.
+                The DOCK is a completely EED-student-run project consisting of multiple subprojects, including:
+                <br><br>
+                <ul>
+                    <li>Audio</li>
+                    <li>Lighting</li>
+                    <li>LED</li>
+                    <li>Content Creation</li>
+                    <li>Graphic Design</li>
+                    <li>Event Design</li>
+                    <li>Schematics</li>
+                    <li>Fabrications</li>
+                    <li>Prop Making</li>
+                    <li>Videography</li>
+                    <li>Project Management</li>
+                    <li>Hospitality / Marketing</li>
+                    <li>Stagehand / Set-Up</li>
+                    <li>Behind the Scenes</li>
+                    <li>Web Development</li>
+                </ul>
+            </p>
+        </section>
+        <br>
+        <section class="list">
+            <p>
+                Our Goal:
+                <br><br>
+                The Entertainment Engineering Program finds Artwalk to be a great showcase of our
+                interdisciplinary status between the college of engineering and college of fine arts.
+                <br><br>
+                <ul>
+                    <li>Dry-Run: August 29th</li>
+                    <li>Artwalk: End of Oct. - Start of Nov.</li>
+                    <li>The DOCK will be completely EED-student run</li>
+                    <li>Learn live-entertainment production</li>
+                    <li>Be multidisciplined and have credits on the project</li>
+                </ul>
+            </p>
+        </section>
+        
+
+        <!-- quick links to more info here -->
+    </section>
+    <main>
+        <footer>
+        <p id="credits">This website was developed by Kayzelle Dagum.</p>
+        <p id="copyright">&copy; 2025 UNLV EED & ETD. All rights reserved.</p>
+        </footer>
+    </main>
+    <!-- hamburger menu for mobile -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
