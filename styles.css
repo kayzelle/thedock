@@ -6,6 +6,8 @@
   --background: #0a0a0f;
   --highlight: #1b4f5f;
   --main: #3bd6ff;
+  --secondary: #1d3036;
+  --tertiary: #f611bd;
   --text: #e5e5f0;
   --black: #000;
   --gray: #777777;
@@ -166,6 +168,52 @@ footer p {
   color: var(--gray);
 }
 
+/**************************
+*   ANNOUNCEMENT STYLES   *
+***************************/
+.importantDates {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 3px solid #ff4df0;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 12px #ff4df0, 0 0 24px rgba(255, 77, 240, 0.6);
+  animation: pulseGlow 3s infinite;
+}
+
+.importantDates h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00f5ff;
+  text-shadow: 0 0 6px #00f5ff, 0 0 12px rgba(0, 245, 255, 0.7);
+  letter-spacing: 2px;
+}
+
+.datesList p {
+  margin: 0.6rem 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.datesList span {
+  font-weight: bold;
+  color: #ff4df0;
+  text-shadow: 0 0 4px #ff4df0, 0 0 8px rgba(255, 77, 240, 0.8);
+}
+
+/* subtle pulsing neon glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px #ff4df0, 0 0 24px rgba(255, 77, 240, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px #ff4df0, 0 0 40px rgba(255, 77, 240, 0.9);
+  }
+}
+
 
 
 /*********************
@@ -196,37 +244,168 @@ footer p {
 *   TEAM STYLES   *
 *******************/
 .teamcontainer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-}
-
-.teamcontainer a {
-  color: inherit;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
 }
 
 .teamcontainer p {
   text-align: left;
-  /* user-select: all;      Allow text selection */
+  line-height: 1.5;
+  color: #e0e0e0;
 }
 
-
 .team-member {
-  /* max-width: 400px; */
-  /* display: flex;
-  justify-content: center; */
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: var(--cyan);
+  border-radius: 16px;
+  border: 2px solid var(--main);
+  padding: 1.5rem;
+  background: radial-gradient(circle at top left, var(--secondary), var(--background));
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4),
+              0 0 24px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Change color, translate, and scale on box hover */
+.team-member:hover {
+  transform: translateY(-6px) scale(1.02);
+  /* border-color: var(--tertiary);
+  box-shadow: 0 0 10px var(--tertiary); */
 }
 
 .team-member h3 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-align: center;
+  color: var(--main);
+  text-shadow: 0 0 3px var(--secondary);
+  margin-bottom: 0.8rem;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Highlight name on hover */
+.team-member h3:hover {
+  color: var(--tertiary);
+  text-shadow: 0 0 3px var(--tertiary);
+}
+
+.teamcontainer a {
+  color: var(--main);
+  text-decoration: none;  /* Remove underline from link */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.teamcontainer a:hover {
+  color: var(--tertiary);
+  text-shadow: 0 0 3px var(--tertiary);
+
+}
+
+/* Neon SVG icons */
+.contactsvg {
+  width: 20px;
+  height: 20px;
+  fill: var(--main);
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  transition: fill 0.3s, filter 0.3s;
+}
+
+.teamcontainer a:hover + .contactsvg,
+.contactsvg:hover {
+  fill: var(--tertiary);
+  filter: drop-shadow(0 0 6px var(--tertiary));
+}
+
+
+/**********************************
+*   SUBPROJECTS / SKILLS STYLES   *
+***********************************/
+/* ul */
+.skillsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: 0.8rem;
+  padding: 0;
+  list-style: none;
+  /* justify-content: center; */
+  padding-left: 11px;
+}
+
+/* div */
+.skillWrapper {
+  border-radius: 1rem;
+  border-color: var(--green);
+  border-width: .15rem;
+  border-style: solid;
+  color: var(--orange);
+  display: flex;
+  padding: 0.2rem 0.8rem;   /* Space inside the card */
+  transition: 0.3s ease;
+}
+
+/* div hover */
+.skillWrapper:hover {
+  transform: scale(1.05);   /* Slightly enlarge the card on hover */
+  box-shadow: 0 4px 6px var(--darkbeige); /*Intensify shadow on hover */
+}
+
+/* li */
+.skill {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/******************
+*   STARFIELD BG  *
+*******************/
+body {
+  background: black;
+  overflow-x: hidden;
+}
+
+.starfield {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, var(--secondary) 0%, var(--background) 100%);
+  overflow: hidden;
+  z-index: 0; /* background layer */
+}
+
+.starfield::before,
+.starfield::after {
+  content: "";
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  width: 400%;
+  height: 400%;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  opacity: .6;
+  animation: starScroll 100s linear infinite;
+  pointer-events: none;  /* <-- THIS lets clicks go through */
+  z-index: 0;            /* push them behind */
+}
+
+.starfield::after {
+  opacity: 0.2;
+  animation-duration: 180s;
+}
+
+@keyframes starScroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(1000px); }
+}
+
+main, header, footer, .teamcontainer {
+  position: relative;
+  z-index: 2;  /* content always above starfield */
 }
 
 
