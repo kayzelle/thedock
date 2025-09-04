@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>The DOCK</title>
+    <title>The DOCK ✦ Gallery</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
@@ -12,8 +13,10 @@
     <header>
         <nav>
             <div class="nav-container">
-                <div class="logo-title">THE DOCK</div>
-                <div>PRESENTED BY EED</div>
+                <div class="logo-wrapper">
+                    <div class="logo-title">THE DOCK</div>
+                    <div class="logo-subtitle">PRESENTED BY EED</div>
+                </div>
                 <div class="hamburger" id="hamburger">&#9776;</div>
                 <ul class="nav-links" id="nav-links">
                     <li><a href="about.html">ABOUT</a></li>
@@ -24,21 +27,31 @@
             </div>
         </nav>
     </header>
-    <section>
+    <div class="starfield">
+    <section class="info">
         <h1>Gallery</h1>
-        <img id="thedock" src="assets/thedocklogo.webp" alt="The DOCK Logo" />
-        <p>
-        Gallery
-        <br><br>
-        The DOCK: <br>
-        Our Goal:
-        <br><br>
+        <br>
+        <div class="announcementWrapper">
+            <img id="thedock" style="margin: 0;" src="assets/thedocksign-color.png" alt="The DOCK Logo"/>
+            <div class="importantDates">
+                <h2>IMPORTANT DATES!</h2>
+                <div class="datesList">
+                    <p><span>Bone-Dry-Run:</span> Friday, August 29th</p>
+                    <p><span>Dry-Run:</span> Friday, September 5th, 6pm – 9pm</p>
+                    <p><span>Art Walk:</span> Friday, October 24th, 5pm – 8pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <img class="galleryphoto" src="gallery/friends.webp" alt="Capybara and Axolotl"/>
+        </div>
+
         <!-- quick links to more info here -->
-        </p>
     </section>
+    </div>
     <main>
         <footer>
-        <p id="credits">This website was developed by Kayzelle Dagum</p>
+        <p id="credits">This website was developed by Kayzelle Dagum.</p>
         <p id="copyright">&copy; 2025 UNLV EED & ETD. All rights reserved.</p>
         </footer>
     </main>

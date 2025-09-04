@@ -36,17 +36,10 @@ body {
     line-height: 1.6;
     padding: 1rem;
     
-    /* background: url("assets/background1.jpg") no-repeat center center fixed; */
     background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
     -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */
     -moz-background-size: cover; /* optional for Firefox 3.6 */ 
     -o-background-size: cover; /* for Opera 9.5 */
-    
-    /* margin: 0; /* to remove the default white margin of body /
-    padding: 0; /* to remove the default white margin of body /
-    overflow: hidden; */
-    /* background-image: radial-gradient(circle at top left, rgba(0, 255, 255, 0.05), transparent 30%); */
-    /* background-image: url(assets/background.jpg) no-repeat center center fixed; */
 }
 
 /* HEADER STYLES */
@@ -172,16 +165,21 @@ section p {
   filter: drop-shadow(0 0 6px var(--main));
 }
 
-/* ABOUT IMAGES */
+/* GALLERY IMAGES */
 .gallery {
   display: flex;
   justify-content: center;
+  margin: 5rem;
 }
 
 .galleryphoto {
   /* max-width: 500px; */
   width: 100%;
   padding: .5rem;
+  border: 3px solid var(--main);
+  border-radius: 12px;
+  /* background: var(--background); */
+  box-shadow: 0 0 12px var(--main), 0 0 24px var(--secondary);
 }
 
 /* TOP LOGO
@@ -207,37 +205,44 @@ footer p {
 /**************************
 *   ANNOUNCEMENT STYLES   *
 ***************************/
-.importantDates {
+.announcementWrapper {
+  display: flex;
+  justify-content: center;   /* centers the whole group */
+  align-items: center;
+  gap: 2rem;                 /* space between logo and box */
   margin: 2rem auto;
+  flex-wrap: wrap;           /* makes it mobile friendly */
+}
+
+.importantDates {
+  margin: 0;
   padding: 1.5rem;
-  border: 3px solid #ff4df0;
+  border: 3px solid var(--tertiary);
   border-radius: 12px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-  max-width: 600px;
+  background: var(--background);
+  max-width: 500px;
   text-align: center;
-  box-shadow: 0 0 12px #ff4df0, 0 0 24px rgba(255, 77, 240, 0.6);
-  animation: pulseGlow 3s infinite;
+  box-shadow: 0 0 12px var(--tertiary), 0 0 24px var(--quaternary);
 }
 
 .importantDates h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #00f5ff;
-  text-shadow: 0 0 6px #00f5ff, 0 0 12px rgba(0, 245, 255, 0.7);
+  color: var(--main);
+  text-shadow: 0 0 6px var(--main), 0 0 12px var(--secondary);
   letter-spacing: 2px;
 }
 
 .datesList p {
   margin: 0.6rem 0;
   font-size: 1.2rem;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .datesList span {
   font-weight: bold;
-  color: #ff4df0;
-  text-shadow: 0 0 4px #ff4df0, 0 0 8px rgba(255, 77, 240, 0.8);
+  color: var(--tertiary);
+  text-shadow: 0 0 4px var(--quaternary), 0 0 8px var(--quaternary);
 }
 
 /* subtle pulsing neon glow */
@@ -304,7 +309,7 @@ footer p {
 }
 
 /* Change color, translate, and scale on box hover */
-.team-member:hover {
+.team-member:hover{
   transform: translateY(-6px) scale(1.02);
   border-color: var(--tertiary);
   box-shadow: 0 0 10px var(--quaternary);
@@ -319,10 +324,10 @@ footer p {
   transition: color 0.3s, text-shadow 0.3s;
 }
 
-/* Highlight name on hover */
-.team-member h3:hover {
+/* Highlight name on box hover */
+.team-member:hover h3 {
   color: var(--tertiary);
-  text-shadow: 0 0 3px var(--quaternary);
+  text-shadow: 0 0 3px var(--secondary);
 }
 
 .teamcontainer a {
@@ -336,7 +341,7 @@ footer p {
   text-shadow: 0 0 3px var(--quaternary);
 }
 
-/* Neon SVG icons */
+/* SVG icons */
 .contactsvg {
   width: 20px;
   height: 20px;
