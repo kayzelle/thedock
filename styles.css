@@ -7,10 +7,12 @@
   --highlight: #1b4f5f;
   --main: #3bd6ff;
   --secondary: #1d3036;
-  --tertiary: #f611bd;
+  --tertiary: #cf8fc1;
+  --quaternary: #853173;
   --text: #e5e5f0;
   --black: #000;
   --gray: #777777;
+  --star: #fff20c;
 }
 
 /* Text selection color */
@@ -76,12 +78,26 @@ header {
     padding: 0.5rem 1rem;
 }
 
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* space between THE DOCK and subtitle */
+}
+
 .logo-title {
-    font-size: 2rem;
-    color: var(--main);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-size: 2rem;
+  color: var(--main);
+  text-shadow: 0 0 5px var(--secondary), 0 0 10px var(--secondary);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo-subtitle {
+  font-size: 1rem;
+  color: var(--main);
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .hamburger {
@@ -124,15 +140,15 @@ section {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    border-top: 1px dashed #3bd6ff33;
-    border-bottom: 1px dashed #3bd6ff33;
+    /* border-top: 1px dashed #3bd6ff33;
+    border-bottom: 1px dashed #3bd6ff33; */
 }
 
 section h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
-    color: #b6e1ff;
-    text-shadow: 0 0 4px var(--main), 0 0 10px #3bd6ff77;
+    color: var(--tertiary);
+    text-shadow: 0 0 4px var(--quaternary), 0 0 10px var(--quaternary);
     margin-bottom: 1rem;
 }
 
@@ -145,17 +161,37 @@ section p {
 /* INFO SECTION */
 .info {
   background-color: var(--background);
-  /* opacity: .5; */
 }
 
 /* LOGO IMAGE */
 #thedock {
-  max-width: 280px;
+  max-width: 150px;
   width: 100%;
   display: block;
   margin: 2rem auto;
   filter: drop-shadow(0 0 6px var(--main));
 }
+
+/* ABOUT IMAGES */
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.galleryphoto {
+  /* max-width: 500px; */
+  width: 100%;
+  padding: .5rem;
+}
+
+/* TOP LOGO
+#thedocksmall {
+  max-width: 50px;
+  width: 100%;
+  display: block;
+  margin: 2rem auto;
+  /* filter: drop-shadow(0 0 6px var(--main));
+} */
 
 /* FOOTER */
 footer {
@@ -270,8 +306,8 @@ footer p {
 /* Change color, translate, and scale on box hover */
 .team-member:hover {
   transform: translateY(-6px) scale(1.02);
-  /* border-color: var(--tertiary);
-  box-shadow: 0 0 10px var(--tertiary); */
+  border-color: var(--tertiary);
+  box-shadow: 0 0 10px var(--quaternary);
 }
 
 .team-member h3 {
@@ -286,7 +322,7 @@ footer p {
 /* Highlight name on hover */
 .team-member h3:hover {
   color: var(--tertiary);
-  text-shadow: 0 0 3px var(--tertiary);
+  text-shadow: 0 0 3px var(--quaternary);
 }
 
 .teamcontainer a {
@@ -297,8 +333,7 @@ footer p {
 
 .teamcontainer a:hover {
   color: var(--tertiary);
-  text-shadow: 0 0 3px var(--tertiary);
-
+  text-shadow: 0 0 3px var(--quaternary);
 }
 
 /* Neon SVG icons */
@@ -314,7 +349,7 @@ footer p {
 .teamcontainer a:hover + .contactsvg,
 .contactsvg:hover {
   fill: var(--tertiary);
-  filter: drop-shadow(0 0 6px var(--tertiary));
+  filter: drop-shadow(0 0 6px var(--quaternary));
 }
 
 
@@ -336,19 +371,19 @@ footer p {
 /* div */
 .skillWrapper {
   border-radius: 1rem;
-  border-color: var(--green);
   border-width: .15rem;
   border-style: solid;
-  color: var(--orange);
   display: flex;
   padding: 0.2rem 0.8rem;   /* Space inside the card */
-  transition: 0.3s ease;
+  transition: ease 0.3s, color 0.3s, text-shadow 0.3s;
 }
+
 
 /* div hover */
 .skillWrapper:hover {
   transform: scale(1.05);   /* Slightly enlarge the card on hover */
-  box-shadow: 0 4px 6px var(--darkbeige); /*Intensify shadow on hover */
+  color: var(--tertiary);
+  text-shadow: 0 0 3px var(--quaternary);
 }
 
 /* li */
