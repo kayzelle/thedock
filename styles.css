@@ -49,14 +49,28 @@ header {
 
 /* LIST STYLES */
 .list {
+  color: var(--main);
+  font-size: 1.1rem;
   display: inline-block;
-  text-align: left;
   align-items: center;
-  border-bottom: 0px;
+  margin: 0;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .list li {
+  color: var(--main);
   list-style-position: inside;
+}
+
+.list a {
+  color: var(--main);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.list a:hover {
+  color: var(--tertiary);
+  text-shadow: 0 0 3px var(--quaternary);
 }
 
 
@@ -151,7 +165,7 @@ section p {
   padding: 1rem;
 }
 
-/* INFO SECTION */
+/* ABOUT SECTION */
 .info {
   background-color: var(--background);
 }
@@ -169,27 +183,17 @@ section p {
 .gallery {
   display: flex;
   justify-content: center;
-  margin: 5rem;
+  margin: 3rem;
 }
 
 .galleryphoto {
-  /* max-width: 500px; */
   width: 100%;
-  padding: .5rem;
   border: 3px solid var(--main);
   border-radius: 12px;
-  /* background: var(--background); */
   box-shadow: 0 0 12px var(--main), 0 0 24px var(--secondary);
+  margin-left: .7rem;
+  margin-right: .7rem;
 }
-
-/* TOP LOGO
-#thedocksmall {
-  max-width: 50px;
-  width: 100%;
-  display: block;
-  margin: 2rem auto;
-  /* filter: drop-shadow(0 0 6px var(--main));
-} */
 
 /* FOOTER */
 footer {
@@ -295,7 +299,7 @@ footer p {
 .teamcontainer p {
   text-align: left;
   line-height: 1.5;
-  color: #e0e0e0;
+  color: var(--text);
 }
 
 .team-member {
