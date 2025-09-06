@@ -58,6 +58,10 @@ header {
   margin-right: 3rem;
 }
 
+.list h3 {
+  margin-left: 1rem;
+}
+
 .list li {
   color: var(--main);
   list-style-position: inside;
@@ -181,9 +185,10 @@ section p {
 
 /* GALLERY IMAGES */
 .gallery {
-  display: flex;
   justify-content: center;
+  display: flex;
   margin: 3rem;
+  height: auto;
 }
 
 .galleryphoto {
@@ -493,4 +498,37 @@ main, header, footer, .teamcontainer {
   #thedock {
     max-width: 220px;
   }
+
+  /* PRESENTED BY */
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* space between THE DOCK and subtitle */
+  }
+
+  /* LIST STYLES */
+  .list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .list a {
+    font-size: 1rem;
+  }
+
+  .list h1 {
+    text-align: center;
+  }
+
+  /* GALLERY IMAGES */
+  .gallery {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .galleryphoto {
+    margin: 1rem;    
+  }
+
+  
 }
