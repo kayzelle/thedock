@@ -530,5 +530,11 @@ main, header, footer, .teamcontainer {
     margin: 1rem;    
   }
 
-  
+  /******************
+  *   TEAM STYLES   *
+  *******************/
+  .teamcontainer {
+    grid-template-columns: 1fr;  /* one card per row */
+    padding: 1rem;
+  }
 }
