@@ -265,6 +265,13 @@ footer p {
   margin-bottom: .5rem;
 }
 
+.importantDates a {
+  text-decoration: underline;
+  text-decoration-color: var(--main);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
 .datesList p {
   padding: .5rem;
   margin: 0;
