@@ -399,7 +399,6 @@ footer p {
   margin-top: 0.8rem;
   padding: 0;
   list-style: none;
-  /* justify-content: center; */
   padding-left: 11px;
 }
 
@@ -428,9 +427,79 @@ footer p {
   padding: 0;
 }
 
-/******************
-*   STARFIELD BG  *
-*******************/
+/************
+*  SETLIST  *
+*************/
+.setlistcontainer {
+  display: flex;
+  justify-content: center;   /* centers the whole group */
+  align-items: center;
+}
+
+.setlist {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0.5rem 1rem;
+  text-align: left;
+  line-height: 2.2;
+
+  border: 1.5px solid var(--main);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+
+  max-width: 700px;
+
+  background: rgba(8, 8, 12, 0.8);
+  box-shadow: 0 0 12px var(--main), inset 0 0 15px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+  position: relative;
+  font-family: 'Outfit', sans-serif;
+  color: var(--tertiary);
+  letter-spacing: 0.6px;
+}
+
+/* time column */
+.setlist-time {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--main);
+  font-size: 1rem;
+  text-shadow: 0 0 6px var(--main);
+}
+
+/* act info column */
+.setlist-act {
+  font-size: 0.95rem;
+  color: var(--tertiary);
+  text-shadow: 0 0 5px rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.4rem;
+}
+
+/* last line no border */
+.setlist-act:last-of-type {
+  border-bottom: none;
+}
+
+/* section header */
+.setlist-title {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  color: var(--main);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px var(--main), 0 0 25px var(--main);
+  margin-bottom: 0.5rem;
+}
+
+
+/*****************
+*  STARFIELD BG  *
+******************/
 body {
   background: black;
   overflow-x: hidden;
